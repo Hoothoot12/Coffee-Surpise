@@ -6,9 +6,7 @@ from flask_sqlalchemy import SQLAlchemy
 from flask_wtf import FlaskForm
 from flask_ckeditor import CKEditor, CKEditorField
 from werkzeug.utils import secure_filename
-import os
 import random
-import fontawesomefree
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = '8BYkEfBA6O6donzWlSihBXox7C0sKR6b'
@@ -34,7 +32,6 @@ class Cafe(db.Model):
     seats = db.Column(db.String(250), nullable=False)
     coffee_price = db.Column(db.String(250), nullable=False)
     description = db.Column(db.Text, nullable=False)
-
 
 #-----Force To load-----
 def create_app():
